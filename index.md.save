@@ -1,0 +1,116 @@
+# PARAMSHAKTHI User Guide
+
+# Introduction
+
+This documentation summarizes the user manual for the PARAM SHAKTI Supercomputing facility at IIT-KGP Kharagpur. 
+It covers a wide range of topics from a detailed description of the hardware information and about the basic production environment such as how-to login, information about submitting jobs, etc.
+The supercomputer PARAM SHAKTI is based on a heterogeneous and hybrid configuration of Intel Xeon Skylake processors,NVIDIA Tesla V100. The system was designed and implemented by HPC Technologies team, Centre for Development of Advanced Computing (C-DAC).
+It consists of 2 Master nodes, 8 Login nodes, 6 Service nodes, 2 Firewall nodes , 2 Management nodes and 442 (CPU+GPU) nodes with total peak computing capacity of 1.63 (CPU+GPU) PFLOPS performance.
+    
+
+
+# System Architecture and Configuration
+
+PARAM SHAKTI systems are based onIntel Xeon SKL G-6148, NVIDIA Tesla V100 with total peak performance of 1.63 PFLOPS.
+ The cluster consists of compute nodes connected with Mellanox (ERD) infiniBand interconnect network.
+ The system uses the Lustre parallel file system.
+
+# System Hardware Specifications
+
+ Total number of nodes: <br> 442 (384 + 22 + 36)<br>
+*	Master nodes: 2
+*	Login nodes: 8
+*	Service nodes: 10
+*	CPU nodes: 420
+*	GPU accelerated nodes: 22
+
+
+
+* Master Nodes: 2
+ 
+         Master Nodes  : 2*2*  Intel Xeon SKL G-6148
+         Cores =40, 2.4 Ghz ,Total Cores = 80 cores
+         Memory= 384 GB, Total Memory  = 768 GB
+         HDD = 900 GB 
+	
+* Login Nodes: 8
+
+       Login Nodes  : 8*2* Intel Xeon SKL G-6148
+       Cores = 40, 2.4 Ghz ,Total Cores = 320 cores
+       Memory= 384 GB ,Total Memory = 3072 GB
+       HDD = 900 GB
+
+* CPU Compute Nodes: 420 
+  
+        *  CPU only Compute Nodes  : 384*2* Intel Xeon SKL G-6148
+           Cores = 40, 2.4GHz ,Total Cores = 15360 cores
+           Memory= 192 GB, DDR4 2666 MHz, Total Memory=737280 GB
+           SSD = 480 GB (local scratch) per node 
+       *  CPU only Compute Nodes High memory  : 36*2* Intel Xeon SKL G-6148
+          Cores = 40, 2.4GHz , Total Cores = 1440 cores
+          Memory= 768 GB, DDR4 2666 MHz , Total Memory=27648 GB
+          SSD = 480 GB (local scratch) per node 
+
+* GPU Compute Nodes: 22  
+
+   GPU Compute Nodes : 22* 2*nVidia V100
+   CPU Cores = 40, 2.4GHz	Total CPU Cores = 880 
+   Memory= 192 GB, DDR4 2666 MHz	Total Memory= 4224 GB 
+   SSD= 480 GB (local scratch) per node
+	
+    GPU Cores per node= 2*5120= 10240	
+    GPU Memory = 16 GB HBM2 per nVidia V100
+	 
+ * Storage File System
+
+
+        *Based on Lustre parallel file system 
+	* Total useable capacity 2.1 PiB primary storage and Archival storage 500 TiB
+	* Throughput 50GB/s
+
+
+*  Operating System
+
+	* Operating system on PARAM SHAKTI is Linux – CentOS 7.6
+
+
+# Network Infrastructure
+   Computing nodes of PARAM SHAKTI are interconnected by a high-bandwidth, low-latency interconnect network. 
+
+  * Primary Interconnect Network
+
+     * InfiniBand: 100 Gbps
+      InfiniBand is a high-performance communication architecture owned by Mellanox. This communication architecture offers low communication latency, low power consumption and a high throughput. All CPU nodes and GPU nodes are connected via InfiniBand interconnect network.
+
+  
+
+
+# Software Stack
+# System Access
+# Best Practices for HPC
+ 
+# Slurm Job Submission
+
+
+# Installed Applications/Libraries
+
+# Machine Learning /Deep Learning Applications Development
+
+# PARAMSHAKTI Support- Quik Guide
+
+   
+
+
+## Commands
+
+* `mkdocs new [dir-name]` - Create a new project.
+* `mkdocs serve` - Start the live-reloading docs server.
+* `mkdocs build` - Build the documentation site.
+* `mkdocs help` - Print this help message.
+
+## Project layout
+
+    mkdocs.yml    # The configuration file.
+    docs/
+        index.md  # The documentation homepage.
+        ...       # Other markdown pages, images and other files.

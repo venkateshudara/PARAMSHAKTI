@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="shortcut icon" href="./img/favicon.ico">
+  <title>Home - PARAMSHAKTI</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> PARAMSHAKTI</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href=".">Home</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#paramshakti-supercomputing-facilty">PARAMSHAKTI  Supercomputing Facilty</a></li>
+    
+
+    <li class="toctree-l2"><a href="#introduction">Introduction</a></li>
+    
+
+    <li class="toctree-l2"><a href="#system-architecture-and-configuration">System Architecture and Configuration</a></li>
+    
+
+    <li class="toctree-l2"><a href="#system-hardware-specifications">System Hardware Specifications</a></li>
+    
+
+    <li class="toctree-l2"><a href="#network-infrastructure">Network Infrastructure</a></li>
+    
+
+    <li class="toctree-l2"><a href="#software-stack">Software Stack</a></li>
+    
+
+    <li class="toctree-l2"><a href="#system-access">System Access</a></li>
+    
+
+    <li class="toctree-l2"><a href="#best-practices-for-hpc">Best Practices for HPC</a></li>
+    
+
+    <li class="toctree-l2"><a href="#slurm-job-submission">Slurm Job Submission</a></li>
+    
+
+    <li class="toctree-l2"><a href="#installed-applicationslibraries">Installed Applications/Libraries</a></li>
+    
+
+    <li class="toctree-l2"><a href="#machine-learning-deep-learning-applications-development">Machine Learning /Deep Learning Applications Development</a></li>
+    
+
+    <li class="toctree-l2"><a href="#paramshakti-support-quik-guide">PARAMSHAKTI Support- Quik Guide</a></li>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">PARAMSHAKTI</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="paramshakti-supercomputing-facilty">PARAMSHAKTI  Supercomputing Facilty</h1>
+<h1 id="introduction">Introduction</h1>
+<p>This documentation summarizes the user manual for the PARAM SHAKTI Supercomputing facility at IIT-KGP Kharagpur. 
+It covers a wide range of topics from a detailed description of the hardware information and about the basic production environment such as how-to login, information about submitting jobs, etc.
+The supercomputer PARAM SHAKTI is based on a heterogeneous and hybrid configuration of Intel Xeon Skylake processors,NVIDIA Tesla V100. The system was designed and implemented by HPC Technologies team, Centre for Development of Advanced Computing (C-DAC).
+It consists of 2 Master nodes, 8 Login nodes, 6 Service nodes, 2 Firewall nodes , 2 Management nodes and 442 (CPU+GPU) nodes with total peak computing capacity of 1.63 (CPU+GPU) PFLOPS performance.</p>
+<h1 id="system-architecture-and-configuration">System Architecture and Configuration</h1>
+<p>PARAM SHAKTI systems are based onIntel Xeon SKL G-6148, NVIDIA Tesla V100 with total peak performance of 1.63 PFLOPS.
+ The cluster consists of compute nodes connected with Mellanox (ERD) infiniBand interconnect network.
+ The system uses the Lustre parallel file system.</p>
+<p><img alt="" src="./image.png" /></p>
+<pre><code>                           Figure :(1). PARAM SHAKTI Architecture Daigram
+</code></pre>
+<h1 id="system-hardware-specifications">System Hardware Specifications</h1>
+<p>Total number of nodes: <br> 442 (384 + 22 + 36)<br>
+<em>   Master nodes: 2
+</em>   Login nodes: 8
+<em>   Service nodes: 10
+</em>   CPU nodes: 420
+*   GPU accelerated nodes: 22</p>
+<ul>
+<li>
+<p>Master Nodes: 2</p>
+<pre><code> Master Nodes  : 2*2*  Intel Xeon SKL G-6148
+ Cores =40, 2.4 Ghz ,Total Cores = 80 cores
+ Memory= 384 GB, Total Memory  = 768 GB
+ HDD = 900 GB
+</code></pre>
+</li>
+<li>
+<p>Login Nodes: 8</p>
+<p>Login Nodes  : 8<em>2</em> Intel Xeon SKL G-6148
+   Cores = 40, 2.4 Ghz ,Total Cores = 320 cores
+   Memory= 384 GB ,Total Memory = 3072 GB
+   HDD = 900 GB</p>
+</li>
+<li>
+<p>CPU Compute Nodes: 420 </p>
+<pre><code>*  CPU only Compute Nodes  : 384*2* Intel Xeon SKL G-6148
+   Cores = 40, 2.4GHz ,Total Cores = 15360 cores
+   Memory= 192 GB, DDR4 2666 MHz, Total Memory=737280 GB
+   SSD = 480 GB (local scratch) per node
+</code></pre>
+<ul>
+<li>CPU only Compute Nodes High memory  : 36<em>2</em> Intel Xeon SKL G-6148
+      Cores = 40, 2.4GHz , Total Cores = 1440 cores
+      Memory= 768 GB, DDR4 2666 MHz , Total Memory=27648 GB
+      SSD = 480 GB (local scratch) per node </li>
+</ul>
+</li>
+<li>
+<p>GPU Compute Nodes: 22  </p>
+</li>
+</ul>
+<p>GPU Compute Nodes : 22<em> 2</em>nVidia V100
+   CPU Cores = 40, 2.4GHz   Total CPU Cores = 880 
+   Memory= 192 GB, DDR4 2666 MHz    Total Memory= 4224 GB 
+   SSD= 480 GB (local scratch) per node</p>
+<pre><code>GPU Cores per node= 2*5120= 10240   
+GPU Memory = 16 GB HBM2 per nVidia V100
+</code></pre>
+<ul>
+<li>
+<p>Storage File System</p>
+<pre><code>*Based on Lustre parallel file system
+</code></pre>
+<ul>
+<li>Total useable capacity 2.1 PiB primary storage and Archival storage 500 TiB</li>
+<li>Throughput 50GB/s</li>
+</ul>
+</li>
+<li>
+<p>Operating System</p>
+<ul>
+<li>Operating system on PARAM SHAKTI is Linux – CentOS 7.6</li>
+</ul>
+</li>
+</ul>
+<h1 id="network-infrastructure">Network Infrastructure</h1>
+<pre><code>      * Computing nodes of PARAM SHAKTI are interconnected by a high-bandwidth, low-latency interconnect network. 
+          *Primary Interconnect Network
+           InfiniBand: 100 Gbps
+           InfiniBand is a high-performance communication architecture owned by Mellanox.
+           This communication architecture offers low communication latency, low power consumption and a high throughput.
+           All CPU nodes and GPU nodes are connected via InfiniBand interconnect network.
+
+        * Secondary Interconnect Network
+         Gigabit Ethernet:  1 Gbps
+         Gigabit Ethernet is the interconnect network that is most commonly available.  
+         For Gigabit Ethernet, no additional modules or libraries are required. 
+         The Open MPI, MPICH implementations will work over Gigabit Ethernet. 
+           Functional Areas Components
+           Base OS                  : CentOS 7.6
+           Architecture         : X86_64
+           Provisioning
+           Cluster Manager          : xCAT  2.14.6
+           Openhpc                  : (ohpc-xCAT 1.3.8)
+           Monitoring Tools         : Nagios, Ganglia, XDMoD
+           Resource Manager         : Slurm
+           I/O Services         : Lustre Client
+           High Speed Interconnects : Mellanox InfiniBand
+           Compiler Families        : GNU (gcc, g++, gfortran)
+           Intel Compiler           : (icc, ifort, icpc)
+           MPI Families         : MVAPICH,  OpenMPI, MPICH
+</code></pre>
+<h1 id="software-stack">Software Stack</h1>
+<h1 id="system-access">System Access</h1>
+<pre><code>   *  Accessing the cluster
+   The cluster can be accessed through 8 general login nodes, which allows users to login.
+You may access login node through ssh.
+The login node is primary gateway to the rest of the cluster, which has a job scheduler (called SLURM). You may submit jobs to the queue, and they will run when the required resources are available. 
+Please do not run programs directly on login node. Login node is used to submit jobs, transfer data and to compile source code. (If your compilation takes more than a few minutes, you should submit the compilation job into the queue to be run on the cluster.)
+     By default, two directories are available (i.e. /home and /scratch). These directories are available on login node as well as the other nodes on the cluster. /scratch is for temporary data storage, generally used to store data required for running jobs.
+   *  Remote Access
+   *   Using SSH in Windows
+        To access PARAM SHAKTI, you need to “ssh” the login server. 
+        PuTTY is the most popular open source “ssh” client application for Windows, you can Download it from (http://www.putty.org/).
+        Once installed, find the PuTTY application shortcut in your Start Menu, desktop. On clicking the PuTTY icon, The PuTTY Configuration dialog should appear. Locate the “Host Name or IP Address” input Field in the PuTTY Configuration screen. Enter the username along with IP address or Hostname with which you wish to connect. 
+        (e.g. [username]@paramshakti.iitkgp.ac.in)
+        Enter your password when prompted, and press Enter.
+   *  Using SSH in Mac or Linux
+      Both Mac and Linux systems provide a built-in SSH client, so there is no need to install any additional package. 
+      Open the terminal, connect to an SSH server by typing the following command:
+        ssh[username]@[hostname]
+      For example, to connect to the PARAM SHAKTI Login Node, with the username 
+         user1: ssh user1@paramshakti.iitkgp.ac.in
+          You will be prompted for a password, and then will be connected to the server.
+           Password 
+           How to change the user password?
+           Use the passwd command to change the password for the user from login node.
+</code></pre>
+<h1 id="best-practices-for-hpc">Best Practices for HPC</h1>
+<p>    Do NOT run any job which is longer that few minutes on the login nodes. Login node is for compilation of job. It is best to run the job on computes. 
+   It is recommended to go through the beginner’s guide in /home/apps/cdac/samples This should serve as a good starting point for the new users.
+   Use the same compiler to compile different parts/modules/library-dependencies of an application. Using different compilers (e.g. pgcc + icc) to compile different parts of application may cause linking or execution issues.
+   Choosing appropriate compiler switches/flags/options (e.g. –O3) may increase the performance of application substantially (accuracy of output must be verified). Please refer to documentation of compilers (online / docs present inside compiler installation path / man pages etc.)
+   Modules/libraries used for execution should be the same as that used for compilations. This can be specified in the Job submission script.
+   Be aware of the amount of disk space utilized by your job(s). Do an estimate before submitting multiple jobs.
+   Please submit jobs preferably in $SCRATCH. You can back up your results/summaries in your $HOME
+   $SCRATCH is NOT backed up! Please download all your data!<br />
+   Before installing any software in your home, ensure that it is from a reliable and safe source. Ransomware is on the rise!
+   Please do not use spaces while creating the directories and files.
+   Please inform hpc-help when you notice something strange - e.g. unexpected slowdowns, files missing/corrupted etc.</p>
+<h1 id="slurm-job-submission">Slurm Job Submission</h1>
+<pre><code>What is SLURM
+</code></pre>
+<p>SLURM (Simple Linux Utility for Resource Management) is a workload manager that provides a framework for job queues, allocation of compute nodes, and the start and execution of jobs.
+Using SLURM
+The cluster compute nodes are available in SLURM partitions. User submits jobs to requisition node resources in a partition. SLURM partitions for general use are “standard”. A few of the sample commands are given below.
+sinfo   Lists out the status of resources in the system
+squeue  Lists out the Job information in the system
+sbatch <script_name>    Submitting a job to the scheduler
+scancel <job_id>    Delete a job</p>
+<p>** Imp Notes:
+  Compilations are done on the login node. Only the execution is scheduled via SLURM on the compute/GPU nodes
+  Upon Submission of a Job script, each job gets a unique Job Id. This can be obtained from the ‘squeue’ command.
+  The Job Id is also appended to the output and error filenames.
+  Parameters used in SLURM job script
+  The following table gives a few parameters which can be used in the SLURM Job submission script.
+   It should be noted that, most of the parameters are optional. The job flags are used with SBATCH command.<br />
+   The syntax for the SLURM directive in a script is "#SBATCH <flag>". A sample SLURM script is given below for your reference. </p>
+<h1 id="installed-applicationslibraries">Installed Applications/Libraries</h1>
+<h1 id="machine-learning-deep-learning-applications-development">Machine Learning /Deep Learning Applications Development</h1>
+<h1 id="paramshakti-support-quik-guide">PARAMSHAKTI Support- Quik Guide</h1>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script src="./js/theme.js"></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.16.3
+Build Date UTC : 2019-12-02 23:10:42
+-->
